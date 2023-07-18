@@ -16,8 +16,8 @@ public class ShoppingCartServiceTest {
     @Test
     public void calculatesPrice()  {
         ShoppingCart cart = new ShoppingCart(Arrays.asList(
-                new Product("Tea", BigDecimal.valueOf(5.0), 2),
-                new Product("Coffee", BigDecimal.valueOf(6.5), 1)
+                new Product("Tea", BigDecimal.valueOf(5.0), 2, "Drink"),
+                new Product("Coffee", BigDecimal.valueOf(6.5), 1, "Drink")
         ));
 
         BigDecimal result = service.calculateTotalPrice(cart);
