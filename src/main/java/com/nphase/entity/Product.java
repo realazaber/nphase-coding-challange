@@ -7,10 +7,15 @@ public class Product {
     private final BigDecimal pricePerUnit;
     private final int quantity;
 
-    public Product(String name, BigDecimal pricePerUnit, int quantity) {
+    // Added category
+
+    private final String category;
+
+    public Product(String name, BigDecimal pricePerUnit, int quantity, String category) {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
         this.quantity = quantity;
+        this.category = category;
     }
 
     public String getName() {
@@ -23,5 +28,9 @@ public class Product {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public String getCategory() {
+        return category;
     }
 }
